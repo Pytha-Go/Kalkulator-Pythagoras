@@ -1,0 +1,250 @@
+/* kalkulator.css - Gaya khusus untuk halaman Kalkulator */
+
+/* Container utama konten kalkulator, mirip dengan .container-content */
+.container-content-kalkulator {
+    background-color: #FFF9E6; /* Latar belakang utama konten */
+    padding: 40px 60px; /* Jarak dari tepi container ke konten */
+    margin: 30px auto; /* Jarak atas/bawah dari navbar/footer, dan pusatkan */
+    max-width: 900px; /* Lebar maksimum konten agar tidak terlalu melebar */
+    border-radius: 12px; /* Sudut membulat pada container utama */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Bayangan lembut untuk container */
+    color: #3B2F2F; /* Warna teks umum */
+    line-height: 1.8; /* Jarak antar baris default */
+    font-size: 1.05em; /* Ukuran font sedikit lebih besar */
+    flex-grow: 1; /* Memungkinkan container ini tumbuh dan mengambil ruang kosong yang tersedia */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan item secara horizontal */
+}
+
+.container-content-kalkulator h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19; /* Warna judul utama */
+    font-size: 2.5em; /* Ukuran font judul utama */
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #FFEB8C; /* Garis bawah yang menonjol */
+    width: 100%; /* Pastikan garis bawah membentang penuh */
+}
+
+.kalkulator-intro {
+    max-width: 700px; /* Sesuaikan lebar paragraf intro */
+    text-align: center;
+    margin: 20px auto 40px auto;
+    font-size: 1.1em;
+    color: #5C2317; /* Warna teks intro */
+}
+
+/* Flex Container untuk 2 Kolom (Penjelasan & Kalkulator) */
+.calculator-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Izinkan wrap pada layar kecil */
+    gap: 40px;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center; /* Pusatkan jika ada ruang kosong */
+    align-items: flex-start; /* Sejajarkan di bagian atas */
+}
+
+/* Kolom Kiri: Penjelasan Kalkulator */
+.penjelasan-kalkulator {
+    flex: 1; /* Ambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimal agar tidak terlalu sempit */
+    color: #3B2F2F;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.penjelasan-kalkulator h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FFEB8C;
+    padding-bottom: 10px;
+}
+
+.penjelasan-kalkulator p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.kalkulator-visual-img {
+    max-width: 80%; /* Sesuaikan ukuran gambar */
+    height: auto;
+    display: block;
+    margin: 20px auto 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.img-caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Kolom Kanan: Wrapper Kalkulator */
+.kalkulator-wrapper {
+    flex: 1; /* Ambil ruang yang tersedia */
+    min-width: 350px; /* Lebar minimal agar tidak terlalu sempit */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.wrapper-svg {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Batasi lebar SVG */
+    height: 300px; /* Tinggi SVG */
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Input sisi */
+input[type="number"] {
+    position: absolute;
+    width: 60px; /* Lebih lebar */
+    padding: 8px 5px; /* Lebih banyak padding */
+    font-size: 1.1em; /* Lebih besar */
+    text-align: center;
+    border: 2px solid #FFEB8C; /* Border kuning */
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    background-color: #fff;
+    color: #3B2F2F;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="number"]:focus {
+    border-color: #8b2d19; /* Border merah saat fokus */
+    box-shadow: 0 0 0 3px rgba(139, 45, 25, 0.2);
+}
+
+/* Posisi input (disesuaikan dengan viewBox SVG) */
+#inputA {
+    top: 125px;
+    left: -34px; /* Lebih ke kiri */
+}
+
+#inputB {
+    bottom: 4px; /* Lebih ke atas dari bawah */
+    left: 150px; /* Sesuaikan posisi */
+}
+
+#inputC {
+    top: 100px; /* Lebih ke atas */
+    left: 185px; /* Sesuaikan posisi */
+}
+
+
+/* Kontrol tombol dan hasil */
+.controls-kalkulator {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.primary-button-kalkulator, .secondary-button-kalkulator {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.3em;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.primary-button-kalkulator {
+    background-color: #8b2d19; /* Warna tombol utama */
+    color: #fff;
+}
+
+.primary-button-kalkulator:hover {
+    background-color: #a03c2a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.secondary-button-kalkulator {
+    background-color: #f0f0f0; /* Warna tombol sekunder */
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.secondary-button-kalkulator:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.kalkulator-hasil {
+    margin-top: 25px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6em; /* Lebih besar */
+    color: #8b2d19; /* Warna teks hasil */
+    background-color: #FFEB8C; /* Latar belakang kuning */
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: 2px solid #a03c2a;
+    width: fit-content; /* Sesuaikan lebar dengan konten */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-content-kalkulator {
+        padding: 20px 25px;
+        margin: 20px auto;
+    }
+    .calculator-flex-container {
+        flex-direction: column; /* Ubah ke tumpukan vertikal */
+        gap: 30px;
+    }
+    .penjelasan-kalkulator, .kalkulator-wrapper {
+        min-width: unset; /* Hapus min-width */
+        width: 100%;
+        padding: 20px;
+    }
+    .container-content-kalkulator h1 {
+        font-size: 2em;
+    }
+    .kalkulator-intro {
+        font-size: 1em;
+    }
+    .primary-button-kalkulator, .secondary-button-kalkulator {
+        font-size: 1.1em;
+        padding: 10px 20px;
+        margin: 0 8px;
+    }
+    .kalkulator-hasil {
+        font-size: 1.4em;
+        padding: 12px 20px;
+    }
+}

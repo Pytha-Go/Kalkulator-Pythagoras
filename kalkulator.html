@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Pythagoras - PythaGo!</title>
+  <link rel="stylesheet" href="style.css" /> <link rel="stylesheet" href="kalkulator.css" /> <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, // Untuk rumus inline
+      CommonHTML: { matchFontHeight: false }
+    });
+  </script>
+</head>
+<body>
+
+  <div class="container-navbar">
+    <a href="index.html" class="logo-navbar-link"> <div class="logo-navbar">PythaGo!</div> </a>
+    <ul class="ul-navbar">
+      <li class="li-navbar">
+        <a class="a-navbar" href="materi.html">Materi</a>
+      </li>
+      <li class="li-navbar">
+        <a class="a-navbar" href="latsol.html">Latihan Soal</a>
+      </li>
+      <li class="li-navbar">
+        <a class="a-navbar active" href="kalkulator.html">Kalkulator Pythagoras</a> </li>
+    </ul>
+</div>
+
+  <div class="container-content-kalkulator">
+    <h1>Kalkulator Pythagoras</h1>
+
+    <p class="kalkulator-intro">
+      Kalkulator ini membantu kamu menghitung sisi ketiga segitiga siku-siku menggunakan Teorema Pythagoras.
+      Masukkan nilai dua sisi, lalu tekan tombol Hitung.
+    </p>
+
+    <div class="calculator-flex-container">
+        <div class="penjelasan-kalkulator">
+            <h2>Prinsip Pythagoras</h2>
+            <p>Teorema Pythagoras menyatakan bahwa dalam segitiga siku-siku, kuadrat sisi miring (hipotenusa) sama dengan jumlah kuadrat dari dua sisi lainnya.</p>
+            <p>Rumus: $c^2 = a^2 + b^2$, dimana $c$ adalah sisi miring, dan $a, b$ adalah sisi siku-siku.</p>
+            <p>Kalkulator ini bisa menemukan sisi $a$, $b$, atau $c$ jika dua sisi lainnya diketahui.</p>
+            <img src="image/kalkulator_pythagoras_visual.png" alt="Visualisasi Segitiga Pythagoras" class="kalkulator-visual-img">
+            <p class="img-caption">Visualisasi input sisi A, B, dan C.</p>
+        </div>
+
+        <div class="kalkulator-wrapper">
+            <div class="wrapper-svg">
+              <svg viewBox="0 0 400 300">
+                <polygon points="50,50 50,250 350,250" fill="none" stroke="#3B2F2F" stroke-width="3"/>
+                <text x="30" y="150" fill="#3B2F2F" font-size="18px" font-weight="bold">A</text>
+                <text x="200" y="270" fill="#3B2F2F" font-size="18px" font-weight="bold">B</text>
+                <text x="200" y="140" fill="#3B2F2F" font-size="18px" font-weight="bold">C</text>
+                <rect x="50" y="230" width="20" height="20" fill="none" stroke="#3B2F2F" stroke-width="2"/>
+                <circle cx="50" cy="250" r="3" fill="#3B2F2F"/>
+                <circle cx="70" cy="250" r="3" fill="#3B2F2F"/>
+                <circle cx="50" cy="230" r="3" fill="#3B2F2F"/>
+              </svg>
+
+              <input type="number" id="inputA" placeholder="B">
+              <input type="number" id="inputB" placeholder="A">
+              <input type="number" id="inputC" placeholder="C">
+            </div>
+
+            <div class="controls-kalkulator">
+              <button id="hitungBtn" class="primary-button-kalkulator">Hitung</button>
+              <button id="resetBtn" class="secondary-button-kalkulator">Reset</button>
+              <div id="hasil" class="kalkulator-hasil"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container-footer">
+    <p>&copy; 2025 PythaGo!. All rights reserved.</p>
+  </div>
+
+  <script src="kalkulator.js"></script>
+</body>
+</html>

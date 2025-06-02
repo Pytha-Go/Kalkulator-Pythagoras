@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Soal Pythagoras Interaktif - PythaGo!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="latsol.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      CommonHTML: { matchFontHeight: false }
+    });
+  </script>
+</head>
+<body>
+
+  <div class="container-navbar">
+    <a href="index.html" class="logo-navbar-link"> <div class="logo-navbar">PythaGo!</div> </a>
+    <ul class="ul-navbar">
+      <li class="li-navbar">
+        <a class="a-navbar" href="materi.html">Materi</a>
+      </li>
+      <li class="li-navbar">
+        <a class="a-navbar active" href="latsol.html">Latihan Soal</a> </li>
+      <li class="li-navbar">
+        <a class="a-navbar" href="kalkulator.html">Kalkulator Pythagoras</a>
+      </li>
+    </ul>
+</div>
+
+  <div class="container-content">
+    <h1>Latihan Soal Teorema Pythagoras</h1>
+    <p>Pilih jawaban yang paling tepat dari pilihan yang tersedia. Setelah selesai, klik "Periksa Jawaban" untuk melihat hasil Anda!</p>
+
+    <div class="question-item" id="q1">
+      <h3 class="question-title">Soal 1</h3>
+      <p>Sebuah segitiga siku-siku memiliki panjang alas $6 cm$ dan tinggi $8 cm$. Berapakah panjang sisi miring segitiga tersebut?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q1" value="a"> A. $10 cm$</label>
+        <label><input type="radio" name="q1" value="b"> B. $12 cm$</label>
+        <label><input type="radio" name="q1" value="c"> C. $14 cm$</label>
+        <label><input type="radio" name="q1" value="d"> D. $16 cm$</label>
+      </div>
+      <div class="feedback" id="feedback1"></div>
+    </div>
+
+    <div class="question-item" id="q2">
+      <h3 class="question-title">Soal 2</h3>
+      <p>Panjang diagonal sebuah persegi panjang adalah $15 cm$. Apabila salah satu sisi persegi panjang tersebut $9 cm$, berapa panjang sisi lainnya?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q2" value="a"> A. $8 cm$</label>
+        <label><input type="radio" name="q2" value="b"> B. $10 cm$</label>
+        <label><input type="radio" name="q2" value="c"> C. $12 cm$</label>
+        <label><input type="radio" name="q2" value="d"> D. $14 cm$</label>
+      </div>
+      <div class="feedback" id="feedback2"></div>
+    </div>
+
+    <div class="question-item" id="q3">
+      <h3 class="question-title">Soal 3</h3>
+      <p>Sebuah tangga disandarkan pada tembok. Panjang tangga adalah $10$ meter dan jarak kaki tangga ke tembok adalah $6$ meter. Berapakah tinggi tembok yang dijangkau tangga?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q3" value="a"> A. $6$ meter</label>
+        <label><input type="radio" name="q3" value="b"> B. $7$ meter</label>
+        <label><input type="radio" name="q3" value="c"> C. $8$ meter</label>
+        <label><input type="radio" name="q3" value="d"> D. $9$ meter</label>
+      </div>
+      <div class="feedback" id="feedback3"></div>
+    </div>
+
+    <div class="question-item" id="q4">
+      <h3 class="question-title">Soal 4</h3>
+      <p>Andi berjalan $9 km$ ke arah timur, lalu berbelok ke arah utara dan berjalan sejauh $12 km$. Berapa kilometer jarak terpendek antara titik awal dan titik akhir perjalanan Andi?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q4" value="a"> A. $15 km$</label>
+        <label><input type="radio" name="q4" value="b"> B. $18 km$</label>
+        <label><input type="radio" name="q4" value="c"> C. $20 km$</label>
+        <label><input type="radio" name="q4" value="d"> D. $21 km$</label>
+      </div>
+      <div class="feedback" id="feedback4"></div>
+    </div>
+
+    <div class="question-item" id="q5">
+      <h3 class="question-title">Soal 5</h3>
+      <p>Sebuah layar televisi berbentuk persegi panjang memiliki panjang $48$ inci dan diagonal $60$ inci. Hitunglah tinggi layar tersebut!</p>
+      <div class="options-container">
+        <label><input type="radio" name="q5" value="a"> A. $32$ inci</label>
+        <label><input type="radio" name="q5" value="b"> B. $36$ inci</label>
+        <label><input type="radio" name="q5" value="c"> C. $40$ inci</label>
+        <label><input type="radio" name="q5" value="d"> D. $42$ inci</label>
+      </div>
+      <div class="feedback" id="feedback5"></div>
+    </div>
+
+    <div class="question-item" id="q6">
+      <h3 class="question-title">Soal 6</h3>
+      <p>Dina ingin membuat papan segitiga siku-siku dengan dua sisi yang panjangnya $9 cm$ dan $12 cm$. Berapakah panjang sisi miringnya agar papan tersebut benar-benar membentuk segitiga siku-siku?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q6" value="a"> A. $13 cm$</label>
+        <label><input type="radio" name="q6" value="b"> B. $14 cm$</label>
+        <label><input type="radio" name="q6" value="c"> C. $15 cm$</label>
+        <label><input type="radio" name="q6" value="d"> D. $16 cm$</label>
+      </div>
+      <div class="feedback" id="feedback6"></div>
+    </div>
+
+    <div class="question-item" id="q7">
+      <h3 class="question-title">Soal 7</h3>
+      <p>Sebuah drone terbang tegak lurus ke atas sejauh $30$ meter dari titik lepas landas. Setelah itu, drone terbang mendatar sejauh $40$ meter. Berapa jarak drone dari titik awal penerbangan sekarang?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q7" value="a"> A. $45$ meter</label>
+        <label><input type="radio" name="q7" value="b"> B. $50$ meter</label>
+        <label><input type="radio" name="q7" value="c"> C. $55$ meter</label>
+        <label><input type="radio" name="q7" value="d"> D. $60$ meter</label>
+      </div>
+      <div class="feedback" id="feedback7"></div>
+    </div>
+
+    <div class="question-item" id="q8">
+      <h3 class="question-title">Soal 8</h3>
+      <p>Panjang sisi segitiga sama sisi PQR pada gambar di bawah ini adalah $14 cm$, maka panjang QB adalah?</p>
+      <div class="latihan-img-container">
+          <img src="image/latsol_segitiga.png" alt="Segitiga Sama Sisi PQR" class="img-materi-small">
+      </div>
+      <div class="options-container">
+        <label><input type="radio" name="q8" value="a"> A. $7\sqrt{2} cm$</label>
+        <label><input type="radio" name="q8" value="b"> B. $7\sqrt{3} cm$</label>
+        <label><input type="radio" name="q8" value="c"> C. $14\sqrt{2} cm$</label>
+        <label><input type="radio" name="q8" value="d"> D. $14\sqrt{3} cm$</label>
+      </div>
+      <div class="feedback" id="feedback8"></div>
+    </div>
+
+    <div class="question-item" id="q9">
+      <h3 class="question-title">Soal 9</h3>
+      <p>Diketahui terdapat dua buah titik pada bidang koordinat kartesius yaitu titik A $(1,4)$ dan titik B $(5,1)$. Maka, panjang garis AB adalah?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q9" value="a"> A. $4$ satuan</label>
+        <label><input type="radio" name="q9" value="b"> B. $5$ satuan</label>
+        <label><input type="radio" name="q9" value="c"> C. $6$ satuan</label>
+        <label><input type="radio" name="q9" value="d"> D. $7$ satuan</label>
+      </div>
+      <div class="feedback" id="feedback9"></div>
+    </div>
+
+    <div class="question-item" id="q10">
+      <h3 class="question-title">Soal 10</h3>
+      <p>Gedung A dan Gedung B berada di dalam kampus yang sama dan dipetakan pada koordinat bidang sebagai berikut: Gedung A di titik $(2,1)$ dan Gedung B di titik $(7, 13)$. Jika seseorang ingin berjalan dari Gedung A ke Gedung B, berapakah jarak terdekat yang harus ditempuh dengan menggunakan koordinat kartesius?</p>
+      <div class="options-container">
+        <label><input type="radio" name="q10" value="a"> A. $10$ satuan</label>
+        <label><input type="radio" name="q10" value="b"> B. $11$ satuan</label>
+        <label><input type="radio" name="q10" value="c"> C. $12$ satuan</label>
+        <label><input type="radio" name="q10" value="d"> D. $13$ satuan</label>
+      </div>
+      <div class="feedback" id="feedback10"></div>
+    </div>
+
+    <div class="quiz-controls">
+      <button id="checkAnswersBtn" class="primary-button">Periksa Jawaban</button>
+      <button id="resetQuizBtn" class="secondary-button">Coba Lagi</button>
+      <div id="finalScore" class="score-display"></div>
+    </div>
+
+  </div>
+
+  <div class="container-footer">
+    <p>&copy; 2025 PythaGo!. All rights reserved.</p>
+  </div>
+
+  <script src="latsol.js"></script>
+</body>
+</html>

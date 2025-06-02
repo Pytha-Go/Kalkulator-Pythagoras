@@ -1,0 +1,166 @@
+/* style.css - Gaya Umum Global */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@500&display=swap');
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF9E6;
+    font-family: 'Poppins', sans-serif;
+    /* PENYESUAIAN PENTING DI SINI untuk footer di bawah */
+    min-height: 100vh; /* Pastikan body minimal setinggi viewport */
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: column; /* Tata elemen dalam kolom */
+    width: 100%; /* Lebih aman daripada 100vw */
+    overflow-x: hidden; /* Tetap pertahankan jika diperlukan untuk mencegah scroll horizontal */
+}
+
+.container-navbar {
+    background-color: #8b2d19;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh;
+    height: 8vh;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo-navbar {
+    font-size: 3.5vh;
+    font-weight: 800;
+    float: left;
+    font-family: 'Fredoka', sans-serif;
+    color: #FFEB8C;
+    margin-left: 2vh;
+}
+
+.ul-navbar {
+    margin-right: 2vh;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+
+.li-navbar {
+    list-style-type: none;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.a-navbar {
+    color:#FFEB8C;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 0.5vh solid transparent;
+    padding-bottom: 0.5vh;
+    transition: border-bottom 0.3s ease;
+}
+
+.a-navbar:hover {
+    border-bottom: 3px solid #FFEB8C;
+}
+
+/* Footer tetap di style.css karena ini adalah gaya GLOBAL yang Anda inginkan */
+.container-footer {
+    /* Perlu disesuaikan agar cocok dengan flexbox di body */
+    background-color: #8b2d19;
+    color: white;
+    text-align: center;
+    padding: 2.5vh 0;
+    /* PENTING untuk footer agar menempel di bawah */
+    margin-top: auto; /* Ini akan mendorong footer ke bawah */
+}
+
+/* Pastikan paragraf di dalam footer tidak memiliki margin default */
+.container-footer p {
+    margin: 0;
+}
+
+.logo-navbar {
+    font-size: 6.5vh;
+    font-weight: 800;
+    font-family: 'Fredoka', sans-serif;
+    /* Warna diatur oleh .logo-navbar-link */
+    margin-left: 2vh;
+}
+
+.logo-navbar-link {
+    text-decoration: none; /* Hapus garis bawah link */
+    color: #FFEB8C; /* Warna default untuk logo link */
+    transition: color 0.3s ease; /* Transisi untuk efek hover */
+    display: flex; /* Memastikan konten di dalamnya tetap di tengah */
+    align-items: center; /* Memastikan logo di tengah vertikal */
+}
+
+.logo-navbar-link:hover {
+    color: #FFF; /* Warna putih saat dihover */
+}
+
+/* Jika Anda ingin menyorot link yang sedang aktif */
+/* Tambahkan ini untuk semua halaman yang memiliki navbar (materi, latsol, kalkulator, index) */
+.a-navbar.active {
+    border-bottom: 3px solid #FFF; /* Garis bawah putih untuk link aktif */
+    color: #FFF; /* Teks putih untuk link aktif */
+}
+
+/* Jika Anda menggunakan .current-page untuk logo di index.html */
+.logo-navbar-link.current-page {
+    color: #FFF; /* Logo menjadi putih saat di halaman utama (opsional) */
+}
+
+/* ... kode .a-navbar, .a-navbar:hover, .container-footer, dll. ... */
+
+/* Pastikan gaya .container-content sudah ada dan sesuai dari file-file lain */
+.container-content {
+    background-color: #FFFFFF;
+    padding: 40px 60px;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    color: #3B2F2F;
+    line-height: 1.8;
+    font-size: 1.05em;
+    flex-grow: 1;
+}
+
+.container-content h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #FFEB8C;
+}
+
+.container-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.img-materi {
+    display: block;
+    margin: 10px auto; /* Margin lebih kecil lagi */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    max-width: 35%; /* DIKECILKAN: Contoh dari 50% menjadi 35% */
+    height: auto;  /* Pertahankan rasio aspek */
+}
+
+.image-caption { /* Jika Anda menambahkan caption gambar */
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -10px; /* Sedikit naik agar dekat gambar */
+    margin-bottom: 20px;
+}

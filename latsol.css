@@ -1,0 +1,275 @@
+/* Styling khusus untuk halaman Latihan Soal (latsol.html) */
+
+/* ----------- Gaya Konten Umum (dari materi.css sebelumnya, sekarang di latsol.css) ----------- */
+.container-content {
+    background-color: #FFF9E6; /* Latar belakang utama konten */
+    padding: 40px 60px; /* Jarak dari tepi container ke konten */
+    margin: 30px auto; /* Jarak atas/bawah dari navbar/footer, dan pusatkan */
+    max-width: 900px; /* Lebar maksimum konten agar tidak terlalu melebar */
+    border-radius: 12px; /* Sudut membulat pada container utama */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Bayangan lembut untuk container */
+    color: #3B2F2F; /* Warna teks umum */
+    line-height: 1.8; /* Jarak antar baris default */
+    font-size: 1.05em; /* Ukuran font sedikit lebih besar */
+    
+    flex-grow: 1; /* Memungkinkan container ini tumbuh dan mengambil ruang kosong yang tersedia */
+}
+
+.container-content h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19; /* Warna judul utama */
+    font-size: 2.5em; /* Ukuran font judul utama */
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #FFEB8C; /* Garis bawah yang menonjol */
+}
+
+.container-content h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid #FFEB8C;
+    padding-left: 15px;
+}
+
+.container-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.container-content ul,
+.container-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.container-content li {
+    margin-bottom: 8px;
+}
+
+/* Gaya umum untuk gambar di dalam konten */
+.img-materi, .img-materi-small {
+    display: block;
+    margin: 25px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.img-materi-small {
+    max-width: 70%;
+}
+
+/* Gaya untuk MathJax (rumus LaTeX) di dalam konten */
+.math-formula {
+    font-family: 'Georgia', serif;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #f0f8ff;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #d0e0ff;
+}
+
+/* ----------- Gaya Khusus Latihan Soal Interaktif ----------- */
+
+/* Gaya untuk setiap blok soal individu */
+.question-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Gaya untuk judul soal (misal "Soal 1", "Soal 2", dst.) */
+.question-item .question-title {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #FFEB8C;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+/* Gaya untuk paragraf pertanyaan di dalam question-item */
+.question-item p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #3B2F2F;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Gaya untuk MathJax (rumus LaTeX) di dalam soal */
+.question-item .MathJax_Display {
+    font-size: 1.2em !important;
+    margin: 15px 0 !important;
+}
+.question-item .mjx-chtml {
+    font-family: 'Georgia', serif !important;
+}
+
+/* Gaya untuk kontainer gambar (misal Soal 8) */
+.latihan-img-container {
+    text-align: center;
+    margin: 25px auto;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    max-width: 70%;
+}
+
+/* Gaya untuk gambar itu sendiri (misal segitiga_pqr_latihan.png) */
+.img-materi-small {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Styling untuk Pilihan Ganda (Interactive) */
+.options-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Jarak antar pilihan */
+}
+
+.options-container label {
+    display: flex; /* Untuk menyelaraskan radio button dan teks */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05em;
+    color: #4A4A4A;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.options-container label:hover {
+    background-color: #ffeeaa; /* Latar belakang kuning saat dihover */
+    border-color: #FFEB8C;
+}
+
+.options-container input[type="radio"] {
+    margin-right: 10px;
+    /* Ubah ukuran radio button jika diinginkan */
+    transform: scale(1.2);
+}
+
+/* Styling untuk Umpan Balik (Benar/Salah) */
+.feedback {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0; /* Sembunyikan secara default */
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+.feedback.correct {
+    background-color: #e6ffed; /* Latar belakang hijau muda */
+    color: #28a745; /* Teks hijau tua */
+    border: 1px solid #28a745;
+    opacity: 1;
+    height: auto;
+    padding: 10px 15px;
+}
+
+.feedback.incorrect {
+    background-color: #ffe6e6; /* Latar belakang merah muda */
+    color: #dc3545; /* Teks merah tua */
+    border: 1px solid #dc3545;
+    opacity: 1;
+    height: auto;
+    padding: 10px 15px;
+}
+
+/* Styling untuk Tombol Kontrol Kuis */
+.quiz-controls {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed #e0e0e0; /* Garis putus-putus pemisah */
+}
+
+.primary-button, .secondary-button {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.4em;
+    padding: 12px 25px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.primary-button {
+    background-color: #8b2d19; /* Warna tombol utama */
+    color: #fff;
+}
+
+.primary-button:hover {
+    background-color: #a03c2a;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: #f0f0f0; /* Warna tombol sekunder */
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.secondary-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Styling untuk Tampilan Skor Akhir */
+.score-display {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2em;
+    color: #8b2d19;
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #FFEB8C;
+    border-radius: 10px;
+    border: 2px solid #a03c2a;
+    opacity: 0; /* Sembunyikan secara default */
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.score-display.show {
+    opacity: 1;
+    height: auto;
+}

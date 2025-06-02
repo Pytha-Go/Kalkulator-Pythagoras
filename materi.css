@@ -1,0 +1,178 @@
+/* materi.css - Styling khusus untuk halaman Materi (materi.html) */
+
+/* ----------- Gaya Konten Umum (dari style.css atau latsol.css sebelumnya) ----------- */
+/* Ini harusnya sudah ada di style.css global atau di latsol.css */
+/* Tapi jika belum, tambahkan atau pastikan terdefinisi */
+.container-content {
+    background-color: #FFFFFF; /* Latar belakang utama konten */
+    padding: 40px 60px; /* Jarak dari tepi container ke konten */
+    margin: 30px auto; /* Jarak atas/bawah dari navbar/footer, dan pusatkan */
+    max-width: 900px; /* Lebar maksimum konten agar tidak terlalu melebar */
+    border-radius: 12px; /* Sudut membulat pada container utama */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Bayangan lembut untuk container */
+    color: #3B2F2F; /* Warna teks umum */
+    line-height: 1.8; /* Jarak antar baris default */
+    font-size: 1.05em; /* Ukuran font sedikit lebih besar */
+
+    flex-grow: 1; /* Memungkinkan container ini tumbuh dan mengambil ruang kosong yang tersedia */
+}
+
+.container-content h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19; /* Warna judul utama */
+    font-size: 2.5em; /* Ukuran font judul utama */
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #FFEB8C; /* Garis bawah yang menonjol */
+}
+
+.container-content h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #8b2d19;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid #FFEB8C;
+    padding-left: 15px;
+}
+
+.container-content h3 { /* Untuk sub-judul seperti "Contoh Soal 1" */
+    font-family: 'Fredoka', sans-serif;
+    color: #5C2317;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.container-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.container-content ul,
+.container-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.container-content li {
+    margin-bottom: 8px;
+}
+
+/* Gaya untuk blockquote (kutipan) */
+blockquote {
+    background-color: #f5f5f5;
+    border-left: 5px solid #FFEB8C;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #555;
+    border-radius: 5px;
+}
+
+/* Gaya untuk gambar dan captionnya */
+.image-with-caption {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 80%; /* Batasi lebar container gambar */
+}
+
+.img-materi {
+    display: block;
+    margin: 0 auto 10px auto; /* Pusat gambar, jarak bawah ke caption */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.image-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+
+/* Gaya untuk block rumus (math-formula-block) */
+.math-formula-block {
+    background-color: #f0f8ff; /* Warna biru muda */
+    border: 1px solid #d0e0ff;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.math-formula-block p {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #444;
+}
+
+/* Gaya untuk setiap MathJax display equation (yang menggunakan $$...$$) */
+.math-formula-block .MathJax_Display {
+    margin: 15px 0 !important; /* Override margin default MathJax */
+    font-size: 1.5em !important; /* Perbesar ukuran rumus */
+    color: #8b2d19; /* Warna rumus */
+}
+
+/* Gaya untuk blok solusi contoh soal */
+.solution-box {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.solution-box strong {
+    color: #8b2d19;
+}
+
+.solution-box p, .solution-box ul {
+    margin-bottom: 10px;
+    text-align: left; /* Biarkan teks solusi rata kiri */
+}
+
+.solution-box .MathJax_Display {
+    margin: 10px 0 !important;
+    font-size: 1.3em !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container-content {
+        padding: 25px 30px;
+        margin: 20px auto;
+    }
+    .container-content h1 {
+        font-size: 2em;
+    }
+    .container-content h2 {
+        font-size: 1.7em;
+    }
+    .container-content h3 {
+        font-size: 1.3em;
+    }
+    .container-content p,
+    .container-content li {
+        font-size: 0.95em;
+    }
+    .image-with-caption {
+        max-width: 100%;
+    }
+    .math-formula-block,
+    .solution-box {
+        padding: 15px;
+    }
+    .math-formula-block .MathJax_Display,
+    .solution-box .MathJax_Display {
+        font-size: 1.2em !important;
+    }
+}
